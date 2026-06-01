@@ -124,6 +124,12 @@
   .status.bad{background:#fbe0e6;color:#c13d70}
   @media(max-width:700px){.tier{grid-template-columns:1fr;gap:8px}.tier-metric{text-align:left}.tier-mid,.tier-bot{margin:0}}
 
+  /* comentarios */
+  .quote{border-left:3px solid var(--pink);background:var(--pink-faint);border-radius:0 10px 10px 0;padding:11px 14px;margin-bottom:10px;font-size:13.5px;color:#5a3a48;font-style:italic}
+  .quote span{display:block;font-style:normal;font-size:11.5px;color:var(--tx3);margin-top:4px}
+  .sentibar{display:flex;height:30px;border-radius:8px;overflow:hidden;margin:6px 0 14px}
+  .sentibar div{display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600;color:#fff}
+
   footer{margin-top:60px;padding-top:26px;border-top:1px solid var(--line);font-size:12px;color:var(--tx3);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
 
   .reveal{opacity:0;transform:translateY(18px);animation:rise .7s cubic-bezier(.2,.7,.3,1) forwards}
@@ -342,8 +348,53 @@
   </div>
 
 
+  <!-- ===== COMENTÁRIOS ===== -->
+  <div class="section-tag reveal"><span class="num">08</span><h2>Comentários: a audiência está pedindo para comprar</h2><span class="ln"></span></div>
+  <p class="reveal" style="color:var(--tx2);font-size:14.5px;max-width:800px;margin:-6px 0 20px">Análise de <b>2.809 comentários</b> dos últimos 30 dias (02/05–01/06). 13% são perguntas — e o que elas perguntam muda a conversa sobre vendas.</p>
+
+  <div class="grid g2">
+    <div class="card reveal">
+      <h3>O que mais perguntam</h3>
+      <p class="desc">357 perguntas classificadas por tema</p>
+      <div class="chartbox" style="height:240px"><canvas id="questionsChart"></canvas></div>
+      <div class="insight"><b>A pergunta nº 1 é "como participo / qual o link / como me inscrevo".</b> As pessoas estão pedindo para comprar e perguntando onde fica a porta. A demanda existe; o caminho de conversão é que não está claro.</div>
+    </div>
+    <div class="card reveal" style="animation-delay:.1s">
+      <h3>O que mais falam</h3>
+      <p class="desc">% dos comentários por tema (um pode entrar em mais de um)</p>
+      <div class="chartbox" style="height:240px"><canvas id="talkedChart"></canvas></div>
+      <div class="insight"><b>Marcação de amiga em 35% dos comentários</b> — o mesmo motor de amizade que move o alcance aparece também aqui. Representatividade 50+ e identificação ("sou eu!") vêm logo atrás.</div>
+    </div>
+  </div>
+
+  <div class="grid g-12-08" style="margin-top:18px">
+    <div class="card reveal">
+      <h3>Sentimento dos comentários</h3>
+      <p class="desc">Heurística por léxico (não é modelo treinado) · 30 dias</p>
+      <div class="sentibar">
+        <div style="width:47%;background:var(--pink)">Positivo 47%</div>
+        <div style="width:52.5%;background:#e8c4d4;color:#7d4f62">Neutro 52%</div>
+        <div style="width:0.5%;background:#7d4f72"></div>
+      </div>
+      <div class="insight">Menos de <b>0,5% de comentários negativos</b> — e mesmo esses são quase todos piadas ("horrível 😂"), não crítica real. A marca tem uma reserva de goodwill enorme: o público não resiste, quer entrar. <b>O "neutro" é majoritariamente marcação de amiga e emoji</b>, não indiferença.</div>
+    </div>
+    <div class="card reveal" style="animation-delay:.1s">
+      <h3>A voz real (amostra)</h3>
+      <p class="desc">Comentários reais, sem identificação</p>
+      <div class="quote">"Como faço para participar?"<span>a pergunta mais repetida — intenção pura de compra</span></div>
+      <div class="quote">"Tem um grupo desse no Rio?"<span>demanda geográfica além de São Paulo</span></div>
+      <div class="quote">"Tenho 72 anos e me sinto sozinha, queria fazer parte"<span>o motor emocional: pertencimento</span></div>
+      <div class="quote">"Passei dos 80, será que me aceitam?"<span>dúvida de inclusão que trava a conversão</span></div>
+    </div>
+  </div>
+
+  <div class="insight reveal" style="margin-top:18px;font-size:14px">
+    <b>Conexão com as 8 vendas:</b> os comentários derrubam a hipótese de "público sem interesse". O interesse está explícito e em volume. O que falta é responder a essas perguntas com um <b>caminho claro de inscrição</b>, resolver a objeção geográfica (presencial só em SP) e a de idade (quem pode entrar). Cada "como participo?" sem resposta clara é uma venda perdida na porta.
+  </div>
+
+
   <!-- ===== FUNIL DE CONTEÚDO ===== -->
-  <div class="section-tag reveal"><span class="num">08</span><h2>O funil de conteúdo que falta</h2><span class="ln"></span></div>
+  <div class="section-tag reveal"><span class="num">09</span><h2>O funil de conteúdo que falta</h2><span class="ln"></span></div>
   <p class="reveal" style="color:var(--tx2);font-size:14.5px;max-width:760px;margin:-6px 0 20px">Hoje a conta tem um topo forte (viraliza) e um fundo fraco (carrossel de venda), sem um meio que aqueça o seguidor entre um e outro. Os roteiros que criamos alimentam o topo — mas só funcionam se houver para onde levar a audiência.</p>
 
   <div class="funil-conteudo reveal">
@@ -374,7 +425,7 @@
   </div>
 
   <!-- ===== DIAGNÓSTICO ===== -->
-  <div class="section-tag reveal"><span class="num">09</span><h2>A tese para o cliente</h2><span class="ln"></span></div>
+  <div class="section-tag reveal"><span class="num">10</span><h2>A tese para o cliente</h2><span class="ln"></span></div>
   <div class="takeaways">
     <div class="tk reveal"><div class="ic">01</div><h4>Não é problema de audiência</h4><p>É de <b>funil</b>. O fechamento (~0,13%) é normal; o que falta é levar a oferta a mais gente certa. O alcance existe — 2,8 mi nos virais — só nunca aponta para a venda.</p></div>
     <div class="tk reveal" style="animation-delay:.08s"><div class="ic">02</div><h4>O público veio pelo humor</h4><p>Crescimento movido por memes de amizade traz <b>seguidor de baixa intenção</b> de compra. Não é defeito da base — é desalinhamento entre como cresce e o que vende.</p></div>
@@ -522,6 +573,26 @@ new Chart(document.getElementById('storiesChart'),{
       {label:'Visualizações',data:[698,927,1003,921,1449,1612],backgroundColor:'#f7a8c4',borderRadius:5}]},
   options:{plugins:{legend:{position:'top',labels:{boxWidth:11,boxHeight:11,usePointStyle:true,pointStyle:'rectRounded',font:{size:11}}},tooltip:{callbacks:{label:c=>c.dataset.label+': '+fmt(c.parsed.y)}}},
     scales:{x:{grid:{display:false},ticks:{font:{size:11}}},y:{grid:{color:GRID}}}}
+});
+
+/* COMENTÁRIOS — o que mais perguntam */
+new Chart(document.getElementById('questionsChart'),{
+  type:'bar',
+  data:{labels:['Como participar / link','Local / cidade','Idade / requisito','Datas / horário','Curso / conteúdo','Preço / pagamento'],
+    datasets:[{data:[82,49,31,10,8,7],
+      backgroundColor:['#c13d70','#e8508a','#f178a4','#f7a8c4','#f7a8c4','#fbcfe0'],borderRadius:5,barThickness:22}]},
+  options:{indexAxis:'y',plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>c.parsed.x+' perguntas'}}},
+    scales:{x:{grid:{color:GRID}},y:{grid:{display:false},ticks:{font:{size:11}}}}}
+});
+
+/* COMENTÁRIOS — o que mais falam */
+new Chart(document.getElementById('talkedChart'),{
+  type:'bar',
+  data:{labels:['Marcação de amiga','Representatividade 50+','Identificação / humor','Elogio estético','Gratidão / motivação'],
+    datasets:[{data:[35,15,11,3,2],
+      backgroundColor:['#c13d70','#e8508a','#f178a4','#f7a8c4','#fbcfe0'],borderRadius:5,barThickness:22}]},
+  options:{indexAxis:'y',plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>c.parsed.x+'% dos comentários'}}},
+    scales:{x:{grid:{color:GRID},ticks:{callback:v=>v+'%'}},y:{grid:{display:false},ticks:{font:{size:11}}}}}
 });
 </script>
 </body>
